@@ -17,12 +17,15 @@ pipeline {
 
                 # TODO fill out the path to conda here
                 # sudo /PATH/TO/CONDA init
+                python -m venv mlip
 
                 # TODO Complete the command to run pytest
                 # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
+                source mlip/bin/activate
+                pip install pytest numpy pandas scikit-learn
 
                 echo 'pytest not runned'
-                exit 1 #comment this line after implementing Jenkinsfile
+                #exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
             }
